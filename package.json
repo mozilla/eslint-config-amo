@@ -4,7 +4,7 @@
   "description": "Eslint config for amo based projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/test.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,11 @@
     "eslint-plugin-jest": "^20.0.3",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0"
+  },
+  "peerDependencies": {
+    "eslint": "^3.19.0"
   }
 }
