@@ -1,3 +1,11 @@
 language: node_js
 node_js:
 - '6'
+deploy:
+  provider: npm
+  email: addons-dev-automation+npm@mozilla.com
+  api_key:
+    secure: Cfck1SdnVp4R5gRvlTVPOeclGfnbCUxvGgmkOSCIb9kr9N5hjK7cMbDjv30sAreWrDFa6gO35kFebwjiMgXxbxyPEOLDkMBoYmNS2k+sbRTfh+USPXDQWsJb2zmcDcIJUkcnUH+V/5eRHukAE4FseGVRNpjlbhgXDWNEUYB0YK2tnhx2c8NYyF9yU6dLNyMyOEujZD4SgI5DS1OwhN1YxpwkZE0SUz6LYnEQRLDxm1LCU9nKyhq+iTsJk0up9bygGtfEq0IN4aLpHwXiJvjmUmpgH+JOu/SwYdzREjcu89m3JdKarPS9o/yonVzp+VUwrcDy+hm+L6czaqrA2z+wQQBMuQDZi8JJzQs4VXAHSDce/yWbToMAI+pzZAGic9wS1n+oa7ysgrlWw7QcuPlrV/biWA+bBwAjUin4cSpHjTKLjV+wXpyUbnKSBwCfa1KZ24FwyRB1LPXnsLX2qzj4sILWtE28nYqn/HsMKoy2tJ0Wal+yGgErN6xQuGZvYaJwb+UoCpK56oVC/jlsdQpctjr1R3g7m1omhaQxT4cHkpUpZaguaopdNj2pilwbPIo/jHMoDkHIapQLoWV2ToJKpZz+lep1RcfKYM3rFYZpYejD0ANir1QXJPgueXbY6aKlS4/ACkXjKKrxciy0r/37NUfVPs51ZR2JQ4UXMLAv1tA=
+  on:
+    tags: true
+    repo: mozilla/eslint-config-amo
