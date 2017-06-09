@@ -1,5 +1,8 @@
 module.exports = {
   "extends": "airbnb",
+  "plugins": [
+     "jest"
+  ],
   "rules": {
     "arrow-body-style": "off",
     "arrow-parens": ["error", "always"],
