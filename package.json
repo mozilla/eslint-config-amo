@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-amo",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Eslint config for amo based projects",
   "main": "index.js",
   "scripts": {
