@@ -102,6 +102,8 @@ module.exports = {
     'react/forbid-prop-types': 'off',
 
     'react/prefer-stateless-function': 'off',
+    'react/require-default-props': 'off',
+
     'react/jsx-indent-props': 'off',
     'react/jsx-closing-bracket-location': 'off',
     'react/jsx-filename-extension': ['warn', {
