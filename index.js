@@ -107,6 +107,11 @@ module.exports = {
     'react/jsx-filename-extension': ['warn', {
       extensions: ['.js', '.jsx'],
     }],
+
+    // Allow more than one prop when the jsx is confined to a single line.
+    // Defaults to 1 prop per line when the jsx spans multiple lines.
+    'react/jsx-max-props-per-line': ['error', { when: 'multiline' }],
+
     'react/jsx-first-prop-new-line': 'off',
     'react/jsx-key': 'error',
     'react/no-string-refs': 'error',
