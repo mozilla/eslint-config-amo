@@ -107,8 +107,8 @@ module.exports = {
     // Use a 2 space indent for jsx props.
     'react/jsx-indent-props': ['error', 2],
 
-    // Aligns closing brackets in jsx with the opening tag.
-    'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
+    // Aligns closing brackets in jsx with the opening line.
+    'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
     'react/jsx-filename-extension': ['warn', {
       extensions: ['.js', '.jsx'],
     }],
