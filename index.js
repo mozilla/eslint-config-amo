@@ -104,8 +104,11 @@ module.exports = {
     'react/prefer-stateless-function': 'off',
     'react/require-default-props': 'off',
 
-    'react/jsx-indent-props': 'off',
-    'react/jsx-closing-bracket-location': 'off',
+    // Use a 2 space indent for jsx props.
+    'react/jsx-indent-props': ['error', 2],
+
+    // Aligns closing brackets in jsx with the opening tag.
+    'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
     'react/jsx-filename-extension': ['warn', {
       extensions: ['.js', '.jsx'],
     }],
@@ -114,7 +117,8 @@ module.exports = {
     // Defaults to 1 prop per line when the jsx spans multiple lines.
     'react/jsx-max-props-per-line': ['error', { when: 'multiline' }],
 
-    'react/jsx-first-prop-new-line': 'off',
+    // Make sure the first prop is on a new line for multiline props.
+    'react/jsx-first-prop-new-line': ['error', 'multiline'],
     'react/jsx-key': 'error',
     'react/no-string-refs': 'error',
   },
