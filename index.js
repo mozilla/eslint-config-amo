@@ -99,7 +99,12 @@ module.exports = {
     // specify whether double or single quotes should be used. Allows template literals.
     quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
 
-    'space-before-function-paren': ['error', 'never'],
+    // Don't use spaces before function parens except when using "await".
+    'space-before-function-paren': ['error', {
+      anonymous: 'never',
+      named: 'never',
+      asyncArrow: 'always',
+    }],
 
     // The airbnb default of this rule mainly encourages `shape` over `object`
     // but there are too many bugs in the linter to use `shape` accurately.
