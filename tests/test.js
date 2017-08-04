@@ -23,6 +23,9 @@ input.forEach((file, index) => {
   assert(output.results[index].filePath.endsWith(file));
 });
 
+// eslint-disable-next-line no-unused-vars
+const quotes = `We could almost call it "music" but it's not`;
+
 assert.equal(output.errorCount, 0,
   `Should be 0 errors but there were ${output.errorCount}`);
 assert.equal(output.warningCount, 0,

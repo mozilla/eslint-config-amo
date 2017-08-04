@@ -95,6 +95,10 @@ module.exports = {
 
     'no-plusplus': 'off',
     'no-underscore-dangle': 'off',
+
+    // specify whether double or single quotes should be used. Allows template literals.
+    quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
+
     'space-before-function-paren': ['error', 'never'],
 
     // The airbnb default of this rule mainly encourages `shape` over `object`
