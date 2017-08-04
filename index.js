@@ -96,6 +96,9 @@ module.exports = {
     'no-plusplus': 'off',
     'no-underscore-dangle': 'off',
 
+    // specify whether double or single quotes should be used. Allows template literals.
+    quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
+
     // Don't use spaces before function parens except when using "await".
     'space-before-function-paren': ['error', {
       anonymous: 'never',
