@@ -99,6 +99,9 @@ module.exports = {
     // specify whether double or single quotes should be used. Allows template literals.
     quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
 
+    // semi-colons should always be at the end of statements.
+    'semi-style': ['error', 'last'],
+
     // Don't use spaces before function parens except when using "await".
     'space-before-function-paren': ['error', {
       anonymous: 'never',
