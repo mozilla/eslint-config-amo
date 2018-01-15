@@ -21,6 +21,9 @@ module.exports = {
       functions: 'ignore',
     }],
 
+    // Turn off function paren newline.
+    'function-paren-newline': 'off',
+
     // This makes sure imported modules exist.
     'import/no-unresolved': ['error'],
 
