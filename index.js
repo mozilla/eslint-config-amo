@@ -99,6 +99,8 @@ module.exports = {
     'no-plusplus': 'off',
     'no-underscore-dangle': 'off',
 
+    'object-curly-newline': 'off',
+
     // specify whether double or single quotes should be used. Allows template literals.
     quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
 
