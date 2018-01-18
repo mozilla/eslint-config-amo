@@ -117,6 +117,22 @@ module.exports = {
 
     'object-curly-newline': 'off',
 
+    // Prefer destructuring from arrays and objects
+    // https://eslint.org/docs/rules/prefer-destructuring
+    // We turn this off for assignments.
+    'prefer-destructuring': ['error', {
+      VariableDeclarator: {
+        array: false,
+        object: true,
+      },
+      AssignmentExpression: {
+        array: false,
+        object: false,
+      },
+    }, {
+      enforceForRenamedProperties: false,
+    }],
+
     // specify whether double or single quotes should be used. Allows template literals.
     quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
 
