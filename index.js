@@ -90,6 +90,13 @@ module.exports = {
     'jest/no-identical-title': 'error',
     'jest/valid-expect': 'error',
 
+    // Turn down warnings for our custom Link component.
+    'jsx-a11y/anchor-is-valid': ['error', {
+      components: [],
+      specialLink: ['to'],
+      aspects: ['noHref', 'invalidHref', 'preferButton'],
+    }],
+
     // Generally avoid the use of console.
     'no-console': 'error',
 
