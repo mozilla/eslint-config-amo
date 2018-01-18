@@ -97,6 +97,15 @@ module.exports = {
       aspects: ['noHref', 'invalidHref', 'preferButton'],
     }],
 
+    // Don't require validation of nesting just id + for attribute.
+    'jsx-a11y/label-has-for': ['error', {
+      components: ['Label'],
+      required: {
+        every: ['id'],
+      },
+      allowChildren: false,
+    }],
+
     // Generally avoid the use of console.
     'no-console': 'error',
 
