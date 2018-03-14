@@ -106,6 +106,10 @@ module.exports = {
       allowChildren: false,
     }],
 
+    // We do not want to enforce this rule, which we inherit.
+    // Awaits in loops can be acceptable.
+    'no-await-in-loop': 'off',
+
     // Generally avoid the use of console.
     'no-console': 'error',
 
