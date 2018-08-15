@@ -116,6 +116,9 @@ module.exports = {
     // We use import/no-duplicates instead because it supports Flow types.
     'no-duplicate-imports': 'off',
 
+    // Airbnb sets `allowElseIf` to false but we do not want that.
+    'no-else-return': 'error',
+
     'no-plusplus': 'off',
 
     // Override the base rule to remove 'ForInStatement' and 'ForOfStatement'
@@ -164,6 +167,9 @@ module.exports = {
       named: 'never',
       asyncArrow: 'always',
     }],
+
+    // Airbnb has turned this rule on again but we don't want that yet.
+    'react/destructuring-assignment': ['off', 'always'],
 
     // The airbnb default of this rule mainly encourages `shape` over `object`
     // but there are too many bugs in the linter to use `shape` accurately.
