@@ -194,9 +194,6 @@ module.exports = {
     // Defaults to 1 prop per line when the jsx spans multiple lines.
     'react/jsx-max-props-per-line': ['error', { when: 'multiline' }],
 
-    // This rule conflicts with Prettier.
-    'react/jsx-one-expression-per-line': 'off',
-
     // Make sure the first prop is on a new line for multiline props.
     'react/jsx-first-prop-new-line': ['error', 'multiline'],
     'react/jsx-key': 'error',
