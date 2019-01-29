@@ -14,7 +14,8 @@
     {
       "depTypeList": [
         "engines",
-        "devDependencies"
+        "devDependencies",
+        "peerDependencies"
       ],
       "rangeStrategy": "replace"
     }
