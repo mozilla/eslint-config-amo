@@ -198,5 +198,12 @@ module.exports = {
     'react/jsx-first-prop-new-line': ['error', 'multiline'],
     'react/jsx-key': 'error',
     'react/no-string-refs': 'error',
+
+    // Enforces where React component static properties should be positioned.
+    // We want them in the class body.
+    'react/static-property-placement': ['error', 'static public field'],
+
+    // Airbnb enforces this but we use this feature a lot!
+    'react/jsx-props-no-spreading': 'off',
   },
 };
