@@ -85,7 +85,7 @@ module.exports = {
     'import/newline-after-import': ['error'],
 
     // Add jest specific eslint rules.
-    'jest/no-disabled-tests': 'warn',
+    'jest/no-disabled-tests': 'error',
     'jest/no-focused-tests': 'error',
     'jest/no-identical-title': 'error',
     'jest/valid-expect': 'error',
