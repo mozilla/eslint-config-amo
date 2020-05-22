@@ -205,5 +205,8 @@ module.exports = {
 
     // Airbnb enforces this but we use this feature a lot!
     'react/jsx-props-no-spreading': 'off',
+
+    // Disable camelcase rule.
+    '@typescript-eslint/camelcase': ['off'],
   },
 };
