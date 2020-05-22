@@ -207,6 +207,6 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
 
     // Disable camelcase rule. 
-    "@typescript-eslint/camelcase": ["off"]
+    '@typescript-eslint/camelcase': ['off'],
   },
 };
