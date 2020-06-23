@@ -14,7 +14,6 @@ const output = new eslint.CLIEngine({
   useEslintrc: false,
 }).executeOnFiles(input);
 
-
 input.forEach((file, index) => {
   if (output.results[index].messages.length) {
     // eslint-disable-next-line no-console
