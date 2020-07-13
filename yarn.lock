@@ -876,9 +876,9 @@ locate-path@^2.0.0:
     path-exists "^3.0.0"
 
 lodash@^4.17.14, lodash@^4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 loose-envify@^1.4.0:
   version "1.4.0"
@@ -1286,9 +1286,9 @@ strip-bom@^3.0.0:
   integrity sha1-IzTBjpx1n3vdVv3vfprj1YjmjtM=
 
 strip-json-comments@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.0.tgz#7638d31422129ecf4457440009fba03f9f9ac180"
-  integrity sha512-e6/d0eBu7gHtdCqFt0xJr642LdToM5/cN4Qb9DbHjVx1CP5RyeM+zH7pbecEmDv/lBqb0QH+6Uqq75rxFPkM0w==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
+  integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
 supports-color@^5.3.0:
   version "5.5.0"
