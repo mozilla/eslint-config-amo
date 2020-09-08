@@ -89,6 +89,9 @@ module.exports = {
     'jest/no-focused-tests': 'error',
     'jest/no-identical-title': 'error',
     'jest/valid-expect': 'error',
+    'jest/valid-title': ['error', {
+      ignoreTypeOfDescribeName: true,
+    }],
 
     // Turn down warnings for our custom Link component.
     'jsx-a11y/anchor-is-valid': ['error', {
