@@ -3,10 +3,7 @@ const assert = require('assert');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const eslint = require('eslint');
 
-const input = [
-  'index.js',
-  'tests/test.js',
-];
+const input = ['index.js', 'tests/test.js'];
 
 const output = new eslint.CLIEngine({
   envs: ['es6', 'node'],
@@ -26,11 +23,13 @@ input.forEach((file, index) => {
 const quotes = `We could almost call it "music" but it's not`;
 
 assert.equal(
-  output.errorCount, 0,
-  `Should be 0 errors but there were ${output.errorCount}`
+  output.errorCount,
+  0,
+  `Should be 0 errors but there were ${output.errorCount}`,
 );
 
 assert.equal(
-  output.warningCount, 0,
-  `Should be 0 warnings but there were ${output.warningCount}`
+  output.warningCount,
+  0,
+  `Should be 0 warnings but there were ${output.warningCount}`,
 );
