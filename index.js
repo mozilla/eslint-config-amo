@@ -1,8 +1,5 @@
 module.exports = {
-  extends: 'airbnb',
-  plugins: [
-    'jest',
-  ],
+  extends: ['airbnb', 'plugin:prettier/recommended', 'plugin:jest/recommended'],
   rules: {
     'arrow-body-style': 'off',
     'arrow-parens': ['error', 'always'],
@@ -13,13 +10,16 @@ module.exports = {
     // accidentally (which would most likely be a mistake).
     'class-methods-use-this': 'off',
 
-    'comma-dangle': ['error', {
-      arrays: 'always-multiline',
-      objects: 'always-multiline',
-      imports: 'always-multiline',
-      exports: 'always-multiline',
-      functions: 'ignore',
-    }],
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'ignore',
+      },
+    ],
 
     // Turn off function paren newline.
     'function-paren-newline': 'off',
@@ -54,13 +54,16 @@ module.exports = {
     'import/no-mutable-exports': ['error'],
 
     // This makes sure package.json defines dev vs. prod dependencies correctly.
-    'import/no-extraneous-dependencies': ['error', {
-      // The following are not allowed to be imported. See .eslintrc in other
-      // directories (like ./test) for where this gets overidden.
-      devDependencies: false,
-      optionalDependencies: false,
-      peerDependencies: false,
-    }],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        // The following are not allowed to be imported. See .eslintrc in other
+        // directories (like ./test) for where this gets overidden.
+        devDependencies: false,
+        optionalDependencies: false,
+        peerDependencies: false,
+      },
+    ],
 
     // This ensures imports are at the top of the file.
     'import/imports-first': ['error'],
@@ -73,10 +76,19 @@ module.exports = {
 
     // This ensures imports are organized by type and that groups are separated
     // by a new line.
-    'import/order': ['error', {
-      groups: ['builtin', 'external', 'internal', ['parent', 'sibling'], 'index'],
-      'newlines-between': 'always',
-    }],
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          ['parent', 'sibling'],
+          'index',
+        ],
+        'newlines-between': 'always',
+      },
+    ],
 
     // Turn of the preference to have a default export.
     'import/prefer-default-export': ['off'],
@@ -89,25 +101,34 @@ module.exports = {
     'jest/no-focused-tests': 'error',
     'jest/no-identical-title': 'error',
     'jest/valid-expect': 'error',
-    'jest/valid-title': ['error', {
-      ignoreTypeOfDescribeName: true,
-    }],
+    'jest/valid-title': [
+      'error',
+      {
+        ignoreTypeOfDescribeName: true,
+      },
+    ],
 
     // Turn down warnings for our custom Link component.
-    'jsx-a11y/anchor-is-valid': ['error', {
-      components: [],
-      specialLink: ['to'],
-      aspects: ['noHref', 'invalidHref', 'preferButton'],
-    }],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: [],
+        specialLink: ['to'],
+        aspects: ['noHref', 'invalidHref', 'preferButton'],
+      },
+    ],
 
     // Don't require validation of nesting just id + for attribute.
-    'jsx-a11y/label-has-for': ['error', {
-      components: ['Label'],
-      required: {
-        every: ['id'],
+    'jsx-a11y/label-has-for': [
+      'error',
+      {
+        components: ['Label'],
+        required: {
+          every: ['id'],
+        },
+        allowChildren: false,
       },
-      allowChildren: false,
-    }],
+    ],
 
     // We do not want to enforce this rule, which we inherit.
     // Awaits in loops can be acceptable.
@@ -130,11 +151,13 @@ module.exports = {
       'error',
       {
         selector: 'LabeledStatement',
-        message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+        message:
+          'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
       },
       {
         selector: 'WithStatement',
-        message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+        message:
+          '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
       },
     ],
 
@@ -145,31 +168,32 @@ module.exports = {
     // Prefer destructuring from arrays and objects
     // https://eslint.org/docs/rules/prefer-destructuring
     // We turn this off for assignments.
-    'prefer-destructuring': ['error', {
-      VariableDeclarator: {
-        array: false,
-        object: true,
+    'prefer-destructuring': [
+      'error',
+      {
+        VariableDeclarator: {
+          array: false,
+          object: true,
+        },
+        AssignmentExpression: {
+          array: false,
+          object: false,
+        },
       },
-      AssignmentExpression: {
-        array: false,
-        object: false,
+      {
+        enforceForRenamedProperties: false,
       },
-    }, {
-      enforceForRenamedProperties: false,
-    }],
+    ],
 
     // specify whether double or single quotes should be used. Allows template literals.
-    quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
+    quotes: [
+      'error',
+      'single',
+      { avoidEscape: true, allowTemplateLiterals: true },
+    ],
 
     // semi-colons should always be at the end of statements.
     'semi-style': ['error', 'last'],
-
-    // Don't use spaces before function parens except when using "await".
-    'space-before-function-paren': ['error', {
-      anonymous: 'never',
-      named: 'never',
-      asyncArrow: 'always',
-    }],
 
     // Airbnb has turned this rule on again but we don't want that yet.
     'react/destructuring-assignment': ['off', 'always'],
@@ -189,9 +213,12 @@ module.exports = {
 
     // Aligns closing brackets in jsx with the opening line.
     'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
-    'react/jsx-filename-extension': ['warn', {
-      extensions: ['.js', '.jsx'],
-    }],
+    'react/jsx-filename-extension': [
+      'warn',
+      {
+        extensions: ['.js', '.jsx'],
+      },
+    ],
 
     // Allow more than one prop when the jsx is confined to a single line.
     // Defaults to 1 prop per line when the jsx spans multiple lines.
