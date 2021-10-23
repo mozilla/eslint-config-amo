@@ -1,35 +1,47 @@
 const assert = require('assert');
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-const eslint = require('eslint');
+const { ESLint } = require('eslint');
 
-const input = ['index.js', 'tests/test.js'];
+(async function tests() {
+  const input = ['index.js', 'tests/test.js'];
 
-const output = new eslint.CLIEngine({
-  envs: ['es6', 'node'],
-  configFile: 'index.js',
-  useEslintrc: false,
-}).executeOnFiles(input);
+  const eslint = new ESLint({
+    overrideConfig: {
+      env: { es6: true, node: true },
+    },
+    overrideConfigFile: 'index.js',
+    useEslintrc: false,
+  });
 
-input.forEach((file, index) => {
-  if (output.results[index].messages.length) {
-    // eslint-disable-next-line no-console
-    console.log(output.results[index].messages);
-  }
-  assert(output.results[index].filePath.endsWith(file));
-});
+  const output = await eslint.lintFiles(input);
 
-// eslint-disable-next-line no-unused-vars
-const quotes = `We could almost call it "music" but it's not`;
+  let errorCount = 0;
+  let warningCount = 0;
 
-assert.equal(
-  output.errorCount,
-  0,
-  `Should be 0 errors but there were ${output.errorCount}`,
-);
+  input.forEach((file, index) => {
+    if (output[index].messages.length) {
+      // eslint-disable-next-line no-console
+      console.log(output[index].messages);
+    }
+    assert(output[index].filePath.endsWith(file));
 
-assert.equal(
-  output.warningCount,
-  0,
-  `Should be 0 warnings but there were ${output.warningCount}`,
-);
+    errorCount += output[index].errorCount;
+    warningCount += output[index].warningCount;
+  });
+
+  // eslint-disable-next-line no-unused-vars
+  const quotes = `We could almost call it "music" but it's not`;
+
+  assert.equal(
+    errorCount,
+    0,
+    `Should be 0 errors but there were ${errorCount}`,
+  );
+
+  assert.equal(
+    warningCount,
+    0,
+    `Should be 0 warnings but there were ${warningCount}`,
+  );
+})();
