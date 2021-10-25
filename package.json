@@ -4,7 +4,7 @@
   "description": "Eslint config for amo based projects",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/test.js"
+    "test": "node tests/index.test.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "license": "MPL-2.0",
   "dependencies": {
     "eslint-config-airbnb": "18.2.1",
+    "eslint-config-airbnb-base": "14.2.1",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.25.2",
     "eslint-plugin-jest": "25.2.2",
