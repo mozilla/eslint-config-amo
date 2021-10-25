@@ -3,14 +3,25 @@ const assert = require('assert');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const { ESLint } = require('eslint');
 
+const mainConfig = require('../index');
+
 (async function tests() {
-  const input = ['index.js', 'tests/test.js'];
+  const input = ['base.js', 'index.js', 'tests/index.test.js'];
 
   const eslint = new ESLint({
     overrideConfig: {
+      ...mainConfig,
+      extends: mainConfig.extends.map((entry) => {
+        // We cannot load the `amo` config from here so we have to adjust the
+        // patch in `extends`.
+        if (entry === 'amo/base') {
+          return './base';
+        }
+
+        return entry;
+      }),
       env: { es6: true, node: true },
     },
-    overrideConfigFile: 'index.js',
     useEslintrc: false,
   });
 

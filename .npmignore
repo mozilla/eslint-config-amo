@@ -1,0 +1,5 @@
+*.tgz
+.*
+CODE_OF_CONDUCT.md
+renovate.json
+tests/
