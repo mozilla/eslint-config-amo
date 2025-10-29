@@ -5,6 +5,10 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:prettier/recommended',
   ],
+  env: {
+    node: true,
+    es6: true,
+  },
   rules: {
     // Enforces return statements in callbacks of array's methods
     'array-callback-return': ['error', { allowImplicit: true }],
