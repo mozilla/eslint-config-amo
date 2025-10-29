@@ -75,6 +75,10 @@ module.exports = {
     // Disallow usage of expressions in statement position
     'no-unused-expressions': ['error'],
 
+    // Disallow unused vars but ignore the rest property’s siblings, e.g. `foo`
+    // will be ignored in `const { foo, ...rest } = data` thanks to `...rest`.
+    'no-unused-vars': ['error', { ignoreRestSiblings: true }],
+
     // This makes sure imported modules exist.
     'import/no-unresolved': ['error'],
 
