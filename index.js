@@ -28,6 +28,9 @@ module.exports = {
     ],
 
     'react/destructuring-assignment': ['off', 'always'],
+
+    'react/display-name': ['off', { ignoreTranspilerName: false }],
+
     'react/forbid-prop-types': 'off',
 
     'react/jsx-filename-extension': [
