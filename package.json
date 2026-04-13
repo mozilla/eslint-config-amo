@@ -31,13 +31,13 @@
     "globals": "17.5.0"
   },
   "devDependencies": {
-    "eslint": "^9.0.0",
+    "eslint": "^10.2.0",
     "jest": "^30.0.0",
     "prettier": "^3.2.5",
     "typescript": "6.0.2"
   },
   "peerDependencies": {
-    "eslint": "^9.0.0",
+    "eslint": "^10.2.0",
     "jest": "^30.0.0",
     "prettier": "^3.2.5"
   }
