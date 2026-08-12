@@ -60,6 +60,10 @@ module.exports = defineConfig([
       // Require return statements to either always or never specify values
       'consistent-return': 'error',
 
+      // Require braces around all control statement bodies, even single-line
+      // ones (e.g. `if (cond) { return; }` instead of `if (cond) return;`)
+      curly: ['error', 'all'],
+
       // Require default case in switch statements
       'default-case': ['error', { commentPattern: '^no default$' }],
 
