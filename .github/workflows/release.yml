@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [master]
+
+permissions: {}
+
+jobs:
+  draft-release:
+    if: |
+      github.event.pull_request.merged == true &&
+      startsWith(github.event.pull_request.head.ref, 'releases/')
+    runs-on: ubuntu-latest
+    permissions:
+      # Required to create the draft release.
+      contents: write
+
+    steps:
+      - uses: mozilla/addons/.github/actions/release@00817a7e08797d4774cc9d27f0a861968a2b6110 # 1.0
+        with:
+          repo: ${{ github.repository }}
+          sha: ${{ github.event.pull_request.merge_commit_sha }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
