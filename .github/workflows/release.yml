@@ -18,7 +18,7 @@ jobs:
       contents: write
 
     steps:
-      - uses: mozilla/addons/.github/actions/release@00817a7e08797d4774cc9d27f0a861968a2b6110 # 1.0
+      - uses: mozilla/addons/.github/actions/release@442a70320c838d93bd0c34708471b8c5ca7ce86f # 1.1
         with:
           repo: ${{ github.repository }}
           sha: ${{ github.event.pull_request.merge_commit_sha }}
