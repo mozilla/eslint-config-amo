@@ -2,6 +2,7 @@
 *.*
 # exclude these files
 Dockerfile
+CODEOWNERS
 # exclude these directories
 /bin/
 /build/
