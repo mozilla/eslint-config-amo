@@ -7,6 +7,15 @@ updates:
     open-pull-requests-limit: 99
     cooldown:
       default-days: 7
+    ignore:
+      # https://github.com/mozilla/eslint-config-amo/issues/797
+      - dependency-name: eslint
+        versions:
+          - ">= 10"
+      # https://github.com/mozilla/eslint-config-amo/issues/798
+      - dependency-name: @eslint/js
+        versions:
+          - ">= 10"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -14,7 +23,7 @@ updates:
     groups:
       ssdlc-actions:
         patterns:
-          - "mozilla/ssdlc-actions/*"       
+          - "mozilla/ssdlc-actions/*"
     cooldown:
       default-days: 7
     open-pull-requests-limit: 99
