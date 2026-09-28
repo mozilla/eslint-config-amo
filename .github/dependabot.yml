@@ -13,7 +13,7 @@ updates:
         versions:
           - ">= 10"
       # https://github.com/mozilla/eslint-config-amo/issues/798
-      - dependency-name: @eslint/js
+      - dependency-name: "@eslint/js"
         versions:
           - ">= 10"
   - package-ecosystem: "github-actions"
